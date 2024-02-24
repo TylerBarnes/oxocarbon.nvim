@@ -1,9 +1,3 @@
-local _local_1_ = require("oxocarbon.colorutils")
-local blend_hex = _local_1_["blend-hex"]
--- if vim.g.colors_name then
--- 	vim.cmd.hi("clear")
--- else
--- end
 vim.g["colors_name"] = "oxocarbon"
 vim.o["termguicolors"] = true
 local base00 = "#161616"
@@ -11,56 +5,30 @@ local base06 = "#ffffff"
 local base09 = "#54a7ff"
 local base095 = "#96c9ff"
 local error = "#ff5a91"
-local oxocarbon = (
-	(
-		(vim.o.background == "dark")
-		and {
-			base00 = base00,
-			base01 = blend_hex(base00, base06, 0.085),
-			base02 = blend_hex(base00, base06, 0.18),
-			base03 = blend_hex(base00, base06, 0.3),
-			base04 = "#eaa668",
-			base045 = "#fab38c",
-			-- base04 = blend_hex(base00, base06, 0.82),
-			base05 = blend_hex(base00, base06, 0.95),
-			base06 = base06,
-			base07 = "#1bc097",
-			base08 = "#f96386",
-			-- base08 = "#f874d2",
-			-- base08 = "#f76acf",
-			base09 = base09,
-			base10 = "#19b690",
-			base11 = "#33b1ff",
-			base12 = "#ba72f1",
-			base13 = "#42be65",
-			base14 = "#b791ff",
-			-- base14 = "#b791ff",
-			base15 = "#82cfff",
-			blend = "#131313",
-			none = "NONE",
-		}
-	)
-	or {
-		base00 = base06,
-		base01 = blend_hex(base00, base06, 0.95),
-		base02 = blend_hex(base00, base06, 0.82),
-		base03 = base00,
-		base04 = "#37474F",
-		base05 = "#90A4AE",
-		base06 = "#525252",
-		base07 = "#08bdba",
-		base08 = "#ff7eb6",
-		base09 = "#ee5396",
-		base10 = "#FF6F00",
-		base11 = "#0f62fe",
-		base12 = "#673AB7",
-		base13 = "#42be65",
-		base14 = "#be95ff",
-		base15 = "#FFAB91",
-		blend = "#FAFAFA",
-		none = "NONE",
-	}
-)
+local oxocarbon = {
+	base00 = base00,
+	base01 = "#262626",
+	base02 = "#393939",
+	base03 = "#525252",
+	base04 = "#eaa668",
+	base045 = "#fab38c",
+	base05 = "#f2f2f2",
+	base06 = base06,
+	base07 = "#1bc097",
+	base08 = "#f96386",
+	-- base08 = "#f874d2",
+	-- base08 = "#f76acf",
+	base09 = base09,
+	base10 = "#19b690",
+	base11 = "#33b1ff",
+	base12 = "#a67dfa",
+	base13 = "#42be65",
+	base14 = "#b791ff",
+	-- base14 = "#b791ff",
+	base15 = "#82cfff",
+	blend = "#131313",
+	none = "NONE",
+}
 do
 end
 -- (vim.g)["terminal_color_0"] = oxocarbon.base01
@@ -233,6 +201,7 @@ vim.api.nvim_set_hl(0, "SpecialComment", { fg = oxocarbon.base08, bg = oxocarbon
 vim.api.nvim_set_hl(0, "Statement", { fg = oxocarbon.base09, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "StorageClass", { fg = oxocarbon.base09, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "String", { fg = oxocarbon.base14, bg = oxocarbon.none })
+-- vim.api.nvim_set_hl(0, "String", { fg = oxocarbon.base14, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "Structure", { fg = oxocarbon.base09, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "Tag", { fg = oxocarbon.base04, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "Todo", { fg = oxocarbon.base13, bg = oxocarbon.none })
@@ -281,7 +250,8 @@ vim.api.nvim_set_hl(0, "@number", { link = "Number" })
 vim.api.nvim_set_hl(0, "@float", { link = "Float" })
 vim.api.nvim_set_hl(0, "@function", { fg = oxocarbon.base12, bg = oxocarbon.none, bold = true })
 vim.api.nvim_set_hl(0, "@function", { fg = oxocarbon.base08, bg = oxocarbon.none, bold = true })
-vim.api.nvim_set_hl(0, "@function.builtin", { fg = oxocarbon.base12, bg = oxocarbon.none })
+vim.api.nvim_set_hl(0, "@function.builtin", { fg = oxocarbon.base10, bg = oxocarbon.none })
+-- vim.api.nvim_set_hl(0, "@function.builtin", { fg = oxocarbon.base12, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@function.macro", { fg = oxocarbon.base07, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@method", { fg = oxocarbon.base07, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@constructor", { fg = oxocarbon.base09, bg = oxocarbon.none })
@@ -303,7 +273,8 @@ vim.api.nvim_set_hl(0, "@property", { fg = oxocarbon.base05, bg = oxocarbon.none
 vim.api.nvim_set_hl(0, "@property", { fg = base095, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@variable", { fg = oxocarbon.base06, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@variable", { fg = oxocarbon.base04, bg = oxocarbon.none })
-vim.api.nvim_set_hl(0, "@variable.builtin", { fg = oxocarbon.base06, bg = oxocarbon.none })
+-- vim.api.nvim_set_hl(0, "@variable.builtin", { fg = oxocarbon.base06, bg = oxocarbon.none })
+vim.api.nvim_set_hl(0, "@variable.builtin", { fg = oxocarbon.base10, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@constant", { fg = oxocarbon.base04, bg = oxocarbon.none })
 -- vim.api.nvim_set_hl(0, "@constant", { fg = oxocarbon.base14, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@constant.builtin", { fg = oxocarbon.base07, bg = oxocarbon.none })
@@ -430,4 +401,57 @@ vim.api.nvim_set_hl(0, "VimwikiHeaderChar", { link = "markdownH1" })
 vim.api.nvim_set_hl(0, "VimwikiList", { link = "markdownListMarker" })
 vim.api.nvim_set_hl(0, "VimwikiLink", { link = "markdownUrl" })
 vim.api.nvim_set_hl(0, "VimwikiCode", { link = "markdownCode" })
+
+local theme = {
+	dark_bg = "#111111",
+}
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = theme.dark_bg })
+vim.api.nvim_set_hl(0, "Float", { bg = theme.dark_bg })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "@ibl.scope.char.1", { fg = theme.dark_bg })
+
+vim.cmd("highlight TelescopeBorder guifg=#33354d guibg=NONE")
+vim.cmd("highlight TelescopePromptBorder guifg=#33354d guibg=NONE")
+vim.cmd("highlight TelescopePreviewTitle guifg=#777888 guibg=NONE")
+vim.cmd("highlight TelescopeResultsTitle guifg=#777888 guibg=NONE")
+vim.cmd("highlight TelescopeSelection guifg=#FFFFFF guibg=#320bcb")
+vim.cmd("highlight TelescopePromptTitle guifg=#777888 guibg=NONE")
+vim.cmd("highlight StatusLine guibg=NONE")
+vim.cmd("highlight StatusLineNC guifg=NONE guibg=NONE")
+vim.cmd("highlight TelescopePromptNormal guibg=NONE")
+vim.cmd("highlight TelescopeNormal guibg=NONE")
+vim.cmd("highlight TelescopePromptPrefix guifg=#FFFFFF guibg=NONE")
+
+vim.cmd("highlight lualine_b_command guibg=NONE")
+vim.cmd("highlight lualine_b_2_command guibg=NONE")
+vim.cmd("highlight lualine_y_branch_command guibg=NONE")
+
+vim.cmd("highlight LineNr guibg=NONE guifg=#33354d")
+
+vim.cmd("highlight CmpPmenu guibg=NONE guifg=NONE")
+vim.cmd("highlight CmpSel guibg=#333333 guifg=NONE")
+
+vim.cmd("highlight BiscuitColor guifg=#33354d")
+
+vim.cmd("highlight Pmenu guibg=NONE guifg=NONE")
+
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#33354d", bg = "NONE" })
+vim.api.nvim_set_hl(0, "VertSplit", { fg = "#222222", bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })
+
+vim.cmd("highlight Tab guibg=NONE guifg=NONE")
+vim.cmd("highlight bufferline guibg=NONE guifg=NONE")
+vim.cmd("highlight BufferLineFill guibg=NONE guifg=NONE")
+vim.cmd("highlight BufferLineBufferSelected guibg=NONE")
+vim.cmd("highlight BufferLineSeperator guifg=black")
+vim.cmd("highlight CursorLine guibg=#151236 guifg=NONE")
+vim.cmd("highlight CursorLineNr guibg=#151236 guifg=white")
+vim.cmd("highlight CursorLineSign guibg=#151236")
+vim.cmd("highlight UfoFoldedBg guibg=#222222 guifg=NONE")
+vim.cmd("highlight NormalFloat ctermbg=NONE guibg=NONE")
+
+-- Set the inactive window background color to transparent
+vim.cmd([[hi inactive ctermbg=NONE guibg=NONE]])
+
 return { oxocarbon = oxocarbon }
