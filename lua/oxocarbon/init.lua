@@ -1,10 +1,12 @@
 vim.g["colors_name"] = "oxocarbon"
 vim.o["termguicolors"] = true
+
 local base00 = "#161616"
 local base06 = "#ffffff"
 local base09 = "#54a7ff"
 local base095 = "#96c9ff"
 local error = "#ff5a91"
+
 local oxocarbon = {
 	base00 = base00,
 	base01 = "#262626",
@@ -29,24 +31,7 @@ local oxocarbon = {
 	blend = "#131313",
 	none = "NONE",
 }
-do
-end
--- (vim.g)["terminal_color_0"] = oxocarbon.base01
--- vim.g["terminal_color_1"] = oxocarbon.base11
--- vim.g["terminal_color_2"] = oxocarbon.base14
--- vim.g["terminal_color_3"] = oxocarbon.base13
--- vim.g["terminal_color_4"] = oxocarbon.base09
--- vim.g["terminal_color_5"] = oxocarbon.base15
--- vim.g["terminal_color_6"] = oxocarbon.base08
--- vim.g["terminal_color_7"] = oxocarbon.base05
--- vim.g["terminal_color_8"] = oxocarbon.base03
--- vim.g["terminal_color_9"] = oxocarbon.base11
--- vim.g["terminal_color_10"] = oxocarbon.base14
--- vim.g["terminal_color_11"] = oxocarbon.base13
--- vim.g["terminal_color_12"] = oxocarbon.base09
--- vim.g["terminal_color_13"] = oxocarbon.base15
--- vim.g["terminal_color_14"] = oxocarbon.base07
--- vim.g["terminal_color_15"] = oxocarbon.base06
+
 vim.api.nvim_set_hl(0, "ColorColumn", { fg = oxocarbon.none, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "Cursor", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
 vim.api.nvim_set_hl(0, "CursorLine", { fg = oxocarbon.none, bg = oxocarbon.base01 })
@@ -411,45 +396,38 @@ vim.api.nvim_set_hl(0, "Float", { bg = theme.dark_bg })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "@ibl.scope.char.1", { fg = theme.dark_bg })
 
-vim.cmd("highlight TelescopeBorder guifg=#33354d guibg=NONE")
-vim.cmd("highlight TelescopePromptBorder guifg=#33354d guibg=NONE")
-vim.cmd("highlight TelescopePreviewTitle guifg=#777888 guibg=NONE")
-vim.cmd("highlight TelescopeResultsTitle guifg=#777888 guibg=NONE")
-vim.cmd("highlight TelescopeSelection guifg=#FFFFFF guibg=#320bcb")
-vim.cmd("highlight TelescopePromptTitle guifg=#777888 guibg=NONE")
-vim.cmd("highlight StatusLine guibg=NONE")
-vim.cmd("highlight StatusLineNC guifg=NONE guibg=NONE")
-vim.cmd("highlight TelescopePromptNormal guibg=NONE")
-vim.cmd("highlight TelescopeNormal guibg=NONE")
-vim.cmd("highlight TelescopePromptPrefix guifg=#FFFFFF guibg=NONE")
-
-vim.cmd("highlight lualine_b_command guibg=NONE")
-vim.cmd("highlight lualine_b_2_command guibg=NONE")
-vim.cmd("highlight lualine_y_branch_command guibg=NONE")
-
-vim.cmd("highlight LineNr guibg=NONE guifg=#33354d")
-
-vim.cmd("highlight CmpPmenu guibg=NONE guifg=NONE")
-vim.cmd("highlight CmpSel guibg=#333333 guifg=NONE")
-
-vim.cmd("highlight BiscuitColor guifg=#33354d")
-
-vim.cmd("highlight Pmenu guibg=NONE guifg=NONE")
-
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#33354d", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = "#33354d", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { fg = "#777888", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { fg = "#777888", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#FFFFFF", bg = "#320bcb" })
+vim.api.nvim_set_hl(0, "TelescopePromptTitle", { fg = "#777888", bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { fg = "#FFFFFF", bg = "NONE" })
+vim.api.nvim_set_hl(0, "lualine_b_command", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "lualine_b_2_command", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "lualine_y_branch_command", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#33354d", bg = "NONE" })
+vim.api.nvim_set_hl(0, "CmpPmenu", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "CmpSel", { fg = "NONE", bg = "#333333" })
+vim.api.nvim_set_hl(0, "BiscuitColor", { fg = "#33354d" })
+vim.api.nvim_set_hl(0, "Pmenu", { fg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#33354d", bg = "NONE" })
 vim.api.nvim_set_hl(0, "VertSplit", { fg = "#222222", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })
-
-vim.cmd("highlight Tab guibg=NONE guifg=NONE")
-vim.cmd("highlight bufferline guibg=NONE guifg=NONE")
-vim.cmd("highlight BufferLineFill guibg=NONE guifg=NONE")
-vim.cmd("highlight BufferLineBufferSelected guibg=NONE")
-vim.cmd("highlight BufferLineSeperator guifg=black")
-vim.cmd("highlight CursorLine guibg=#151236 guifg=NONE")
-vim.cmd("highlight CursorLineNr guibg=#151236 guifg=white")
-vim.cmd("highlight CursorLineSign guibg=#151236")
-vim.cmd("highlight UfoFoldedBg guibg=#222222 guifg=NONE")
-vim.cmd("highlight NormalFloat ctermbg=NONE guibg=NONE")
+vim.api.nvim_set_hl(0, "Tab", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "bufferline", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "BufferLineFill", { fg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "BufferLineSeperator", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "CursorLine", { fg = "NONE", bg = "#151236" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "white", bg = "#151236" })
+vim.api.nvim_set_hl(0, "CursorLineSign", { bg = "#151236" })
+vim.api.nvim_set_hl(0, "UfoFoldedBg", { fg = "NONE", bg = "#222222" })
+vim.api.nvim_set_hl(0, "NormalFloat", { fg = "NONE", bg = "NONE" })
 
 -- Set the inactive window background color to transparent
 vim.cmd([[hi inactive ctermbg=NONE guibg=NONE]])
