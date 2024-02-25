@@ -402,8 +402,11 @@ vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { fg = "#777888", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { fg = "#777888", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#FFFFFF", bg = "#320bcb" })
 vim.api.nvim_set_hl(0, "TelescopePromptTitle", { fg = "#777888", bg = "NONE" })
-vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
+
+-- statusline and statuslinenc values must be different or the statusline will show annoying ^^^^^ characters
+vim.api.nvim_set_hl(0, "StatusLine", { fg = "#FFFFFF", bg = "NONE" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "NONE", bg = "NONE" })
+
 vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { fg = "#FFFFFF", bg = "NONE" })
