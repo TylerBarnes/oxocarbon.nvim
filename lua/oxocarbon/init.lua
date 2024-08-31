@@ -352,6 +352,7 @@ vim.api.nvim_set_hl(0, "CmpItemKindEnumMember", { fg = oxocarbon.base01, bg = ox
 vim.api.nvim_set_hl(0, "NvimTreeImageFile", { fg = oxocarbon.base12, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", { fg = oxocarbon.base12, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = oxocarbon.base00, bg = oxocarbon.base00 })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = oxocarbon.base01, bg = "NONE" })
 vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = oxocarbon.base09, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "NvimTreeIndentMarker", { fg = oxocarbon.base02, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "NvimTreeEmptyFolderName", { fg = oxocarbon.base15, bg = oxocarbon.none })
